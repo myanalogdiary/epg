@@ -44,7 +44,7 @@
 <channel site="guida.tv"                       lang="it" xmltv_id="frisbee"            site_id="73708273/frisbee">Frisbee</channel>
 <channel site="guida.tv"                       lang="it" xmltv_id="k2"                 site_id="75507384/k2">K2</channel>
 <channel site="guidatv.sky.it"                 lang="it" xmltv_id="super"              site_id="DTH#6460">Super!</channel>
-<channel site="superguidatv.it"                lang="it" xmltv_id="hgtv"               site_id="hgtv-homegarden/575">HGTV - Home & Garden TV</channel>  
+<channel site="superguidatv.it"                lang="it" xmltv_id="hgtv"               site_id="hgtv-homegarden/575">HGTV</channel>  
 <channel site="tivu.tv"                        lang="it" xmltv_id="discovery-turbo"    site_id="262">Discovery Turbo</channel>
 <channel site="tivu.tv"                        lang="it" xmltv_id="rai4k"              site_id="256">Rai 4K</channel>  
   

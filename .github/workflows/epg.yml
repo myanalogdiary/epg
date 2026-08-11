@@ -211,6 +211,40 @@ jobs:
           fi
 
           echo "Generazione pulita e robusta del payload JSON..."
+          jq -n --rawfile xml_content guide.xml '{files: {"guide.xml": {content: $xml_content}}}' > json_payload.json
+
+          echo "Inizio sincronizzazione sicura verso l'endpoint API ufficiale dei Gist..."
+          # URL perfettamente pulito e corretto verso l'API REST di GitHub
+          HTTP_STATUS=$(curl -s -w "%{http_code}" -o response_details.txt -L \
+            -X PATCH \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${GIST_PAT}" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            -H "Content-Type: application/json" \
+            https://github.com{GIST_ID} \
+            -d @json_payload.json)
+
+          # Rimuove immediatamente il file di payload temporaneo per sicurezza
+          rm -f json_payload.json
+
+          # 3. Analisi dettagliata dell'esito della chiamata REST API
+          if [ "$HTTP_STATUS" -eq 200 ]; then
+            echo "Process sync end. Il file xml è stato iniettato e aggiornato nel tuo Gist (HTTP 200)."
+          else
+            echo "::error::La sincronizzazione ha fallito con codice HTTP ${HTTP_STATUS}"
+            echo "Dettagli della risposta dell'API di GitHub:"
+            if [ -f response_details.txt ]; then
+              cat response_details.txt
+              rm -f response_details.txt
+            fi
+            exit 1
+          fi
+          
+          if [ -f response_details.txt ]; then
+            rm -f response_details.txt
+          fi
+
+          echo "Generazione pulita e robusta del payload JSON..."
           # Genera il file JSON inserendo l'intero contenuto XML in modo sicuro come stringa raw
           jq -n --rawfile xml_content guide.xml '{files: {"guide.xml": {content: $xml_content}}}' > json_payload.json
 

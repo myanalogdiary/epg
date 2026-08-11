@@ -1,0 +1,51 @@
+<channels>
+<!--  ================== ITALY ==================  -->
+<channel site="raiplay.it"                     lang="it" xmltv_id="rai-1"              site_id="rai-1">Rai 1</channel>
+<channel site="raiplay.it"                     lang="it" xmltv_id="rai-2"              site_id="rai-2">Rai 2</channel>
+<channel site="raiplay.it"                     lang="it" xmltv_id="rai-3"              site_id="rai-3">Rai 3</channel>
+<channel site="mediasetinfinity.mediaset.it"   lang="it" xmltv_id="rete-4"             site_id="R4">Rete 4</channel>
+<channel site="mediasetinfinity.mediaset.it"   lang="it" xmltv_id="canale-5"           site_id="C5">Canale 5</channel>
+<channel site="mediasetinfinity.mediaset.it"   lang="it" xmltv_id="italia-1"           site_id="I1">Italia 1</channel>
+<channel site="guidatv.sky.it"                 lang="it" xmltv_id="la7"                site_id="DTH#319">La7</channel>
+<channel site="guidatv.sky.it"                 lang="it" xmltv_id="tv8"                site_id="DTH#8195">TV8</channel>
+<channel site="guida.tv"                       lang="it" xmltv_id="nove"               site_id="68748486/nove">Nove</channel>
+<channel site="raiplay.it"                     lang="it" xmltv_id="rai-4"              site_id="rai-4">Rai 4</channel>
+<channel site="mediasetinfinity.mediaset.it"   lang="it" xmltv_id="iris"               site_id="KI">Iris</channel>
+<channel site="mediasetinfinity.mediaset.it"   lang="it" xmltv_id="la5"                site_id="LA">La5</channel>  
+<channel site="raiplay.it"                     lang="it" xmltv_id="rai-5"              site_id="rai-5">Rai 5</channel>
+<channel site="raiplay.it"                     lang="it" xmltv_id="rai-movie"          site_id="rai-movie">Rai Movie</channel>
+<channel site="raiplay.it"                     lang="it" xmltv_id="rai-premium"        site_id="rai-premium">Rai Premium</channel>
+<channel site="mediasetinfinity.mediaset.it"   lang="it" xmltv_id="italia-2"           site_id="I2">Italia 2</channel>
+<channel site="mediasetinfinity.mediaset.it"   lang="it" xmltv_id="mediaset-extra"     site_id="KQ">Mediaset Extra</channel>
+<channel site="guidatv.sky.it"                 lang="it" xmltv_id="tv2000"             site_id="DTH#7588">TV2000</channel>
+<channel site="guidatv.sky.it"                 lang="it" xmltv_id="cielo"              site_id="DTH#8133">Cielo</channel>
+<channel site="mediasetinfinity.mediaset.it"   lang="it" xmltv_id="20"                 site_id="LB">20 Mediaset</channel>
+<channel site="raiplay.it"                     lang="it" xmltv_id="rai-sport"          site_id="rai-sport">Rai Sport</channel>  
+<channel site="mediasetinfinity.mediaset.it"   lang="it" xmltv_id="focus"              site_id="FU">Focus</channel>
+<channel site="raiplay.it"                     lang="it" xmltv_id="rai-storia"         site_id="rai-storia">Rai Storia</channel>  
+<channel site="raiplay.it"                     lang="it" xmltv_id="rai-news-24"        site_id="rai-news-24">Rai News 24</channel>
+<channel site="mediasetinfinity.mediaset.it"   lang="it" xmltv_id="tgcom24"            site_id="KF">TGCOM 24</channel>  
+<channel site="raiplay.it"                     lang="it" xmltv_id="rai-scuola"         site_id="rai-scuola">Rai Scuola</channel>
+<channel site="mediasetinfinity.mediaset.it"   lang="it" xmltv_id="27-twentyseven"     site_id="TS">27 Twentyseven</channel>
+<channel site="guida.tv"                       lang="it" xmltv_id="dmax"               site_id="68776588/dmax-italia">DMAX Italia</channel>
+<channel site="guidatv.sky.it"                 lang="it" xmltv_id="la7-cinema"         site_id="DTH#6624">La7 Cinema</channel>
+<channel site="guida.tv"                       lang="it" xmltv_id="real-time"          site_id="82847384/real-time">Real Time</channel>
+<channel site="guida.tv"                       lang="it" xmltv_id="food-network"       site_id="70787384/food-network">Food Network</channel>  
+<channel site="mediasetinfinity.mediaset.it"   lang="it" xmltv_id="cine34"             site_id="B6">Cine34</channel>  
+<channel site="guidatv.sky.it"                 lang="it" xmltv_id="radioitalia-tv"     site_id="DTH#9833">Radio Italia TV </channel>
+<channel site="guidatv.sky.it"                 lang="it" xmltv_id="rtl-102-5-tv"        site_id="DTH#6885">RTL 102.5 HD</channel>
+<channel site="guida.tv"                       lang="it" xmltv_id="discovery"          site_id="68736773/discovery-channel-i">Discovery Channel I</channel>
+<channel site="guida.tv"                       lang="it" xmltv_id="giallo"             site_id="71737979/giallo">Giallo</channel>
+<channel site="mediasetinfinity.mediaset.it"   lang="it" xmltv_id="top-crime"          site_id="LT">Top Crime</channel>
+<channel site="guidatv.sky.it"                 lang="it" xmltv_id="boing"              site_id="DTH#6628">Boing</channel>
+<channel site="guidatv.sky.it"                 lang="it" xmltv_id="cartoonito"         site_id="DTH#8132">CARTOONITO DTT</channel>
+<channel site="raiplay.it"                     lang="it" xmltv_id="rai-gulp"           site_id="rai-gulp">RAI GULP</channel>
+<channel site="raiplay.it"                     lang="it" xmltv_id="rai-yoyo"           site_id="rai-yoyo">RAI YOYO</channel>
+<channel site="guida.tv"                       lang="it" xmltv_id="frisbee"            site_id="73708273/frisbee">Frisbee</channel>
+<channel site="guida.tv"                       lang="it" xmltv_id="k2"                 site_id="75507384/k2">K2</channel>
+<channel site="guidatv.sky.it"                 lang="it" xmltv_id="super"              site_id="DTH#6460">Super!</channel>
+  
+<!--  ================== USA ==================  -->
+<channel site="pluto.tv"                       lang="en" xmltv_id="abc-news-live"      site_id="6508be683a0d700008c534e4">ABC News Live</channel>
+<channel site="pluto.tv"                       lang="en" xmltv_id="livenowfromfox"     site_id="63d025db4e83e700086eaa96">LiveNOW from FOX</channel>
+</channels>

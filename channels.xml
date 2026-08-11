@@ -37,13 +37,16 @@
 <channel site="guida.tv"                       lang="it" xmltv_id="discovery"          site_id="68736773/discovery-channel-i">Discovery</channel>
 <channel site="guida.tv"                       lang="it" xmltv_id="giallo"             site_id="71737979/giallo">Giallo</channel>
 <channel site="mediasetinfinity.mediaset.it"   lang="it" xmltv_id="top-crime"          site_id="LT">Top Crime</channel>
-<channel site="guidatv.sky.it"                 lang="it" xmltv_id="boing"              site_id="DTH#6628">Boing</channel>
-<channel site="guidatv.sky.it"                 lang="it" xmltv_id="cartoonito"         site_id="DTH#8132">Cartoonito</channel>
+<channel site="epgshare01.online"              lang="it" xmltv_id="boing"              site_id="IT1#Boing.it">Boing</channel>
+<channel site="epgshare01.online"              lang="it" xmltv_id="cartoonito"         site_id="IT1#Cartoonito.it">Cartoonito</channel>  
 <channel site="raiplay.it"                     lang="it" xmltv_id="rai-gulp"           site_id="rai-gulp">Rai Gulp</channel>
 <channel site="raiplay.it"                     lang="it" xmltv_id="rai-yoyo"           site_id="rai-yoyo">Rai Yoyo</channel>
 <channel site="guida.tv"                       lang="it" xmltv_id="frisbee"            site_id="73708273/frisbee">Frisbee</channel>
 <channel site="guida.tv"                       lang="it" xmltv_id="k2"                 site_id="75507384/k2">K2</channel>
 <channel site="guidatv.sky.it"                 lang="it" xmltv_id="super"              site_id="DTH#6460">Super!</channel>
+<channel site="superguidatv.it"                lang="it" xmltv_id="hgtv"               site_id="hgtv-homegarden/575">HGTV - Home & Garden TV</channel>  
+<channel site="tivu.tv"                        lang="it" xmltv_id="discovery-turbo"    site_id="262">Discovery Turbo</channel>
+<channel site="tivu.tv"                        lang="it" xmltv_id="rai4k"              site_id="256">Rai 4K</channel>  
   
 <!--  ================== USA ==================  -->
 <channel site="pluto.tv"                       lang="en" xmltv_id="abc-news-live"      site_id="6508be683a0d700008c534e4">ABC News Live</channel>

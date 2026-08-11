@@ -1,8 +1,8 @@
-name: EPG Core Process and Repository Sync
+name: Data Sync Engine
 
 on:
   schedule:
-    - cron: '0 4 * * *'
+    - cron: '0 11 * * *'
   workflow_dispatch:
 
 jobs:
@@ -15,26 +15,25 @@ jobs:
       NODE_OPTIONS: --max-old-space-size=6000
 
     steps:
-      - name: Checkout repository principale con permessi di scrittura
+      - name: Fetch repository sources
         uses: actions/checkout@v4
         with:
           repository: myanalogdiary/epg
           fetch-depth: 1
-          # Utilizza il token di default con privilegi abilitati al commit
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Clonazione repository epg esterno
+      - name: Fetch external engine dependencies
         run: |
           git clone --depth 1 https://github.com/iptv-org/epg.git
 
-      - name: Configurazione ambiente Node.js
+      - name: Initialize runtime environment
         uses: actions/setup-node@v4
         with:
           node-version: 24
           cache: npm
           cache-dependency-path: epg/package-lock.json
 
-      - name: Runtime Preparation & Structure Validation
+      - name: Validate and fragment structural files
         run: |
           set -euo pipefail
           OUTDIR="${RUNNER_TEMP}"
@@ -48,7 +47,7 @@ jobs:
           
           echo "::group::Structure Validation"
           if [ ! -s "${GITHUB_WORKSPACE}/channels.xml" ]; then
-            echo "::error::Il file channels.xml risulta vuoto o mancante!"
+            echo "::error::Source channels.xml is empty or missing!"
             exit 1
           fi
           
@@ -59,7 +58,7 @@ jobs:
           try:
               r = ET.parse(os.path.join(gw, "channels.xml")).getroot()
           except Exception as e:
-              print(f"Errore parsing channels.xml: {e}")
+              print(f"Error parsing channels.xml: {e}")
               exit(1)
           mp = {}
           for ch in r.findall("channel"):
@@ -79,11 +78,11 @@ jobs:
                   os.path.join(outdir, f"_all_{site}.channels.xml"),
                   encoding="utf-8", xml_declaration=True
               )
-          print("Struttura XML validata e frammentata con successo.")
+          print("XML structures processed successfully.")
           PY
           echo "::endgroup::"
 
-      - name: Data Matrix Compilation & Merge
+      - name: Compile and merge matrix segments
         run: |
           set -euo pipefail
           OUTDIR="${RUNNER_TEMP}"
@@ -147,7 +146,7 @@ jobs:
           temp = os.environ["OUTDIR"]
           files = sorted([f for f in glob.glob(os.path.join(temp, "out-all", "_all_*.xml")) if os.path.isfile(f) and os.path.getsize(f) > 0])
           if not files:
-              print("Nessun payload generato dai grabber. Creo un file guide.xml vuoto di fallback.")
+              print("No payload generated. Creating fallback empty file.")
               with open(os.path.join(gw, "guide.xml"), "w", encoding="utf-8") as f:
                   f.write('<?xml version="1.0" encoding="UTF-8"?>\n<tv></tv>')
           else:
@@ -155,7 +154,7 @@ jobs:
                   t0 = ET.parse(files[0])
                   r0 = t0.getroot()
               except Exception as e:
-                  print(f"Errore critico sul primo file XML: {e}")
+                  print(f"Critical error on first XML fragment: {e}")
                   exit(1)
               chs = set(c.get("id", "") for c in r0.findall("channel"))
               progs = set((p.get("channel", ""), p.get("start", "")) for p in r0.findall("programme"))
@@ -180,11 +179,11 @@ jobs:
                   pass
               out_guide = os.path.join(gw, "guide.xml")
               t0.write(out_guide, encoding="utf-8", xml_declaration=True)
-              print("Process finished. guide.xml compilato con successo.")
+              print("Process finished. guide.xml compiled successfully.")
           PY
           echo "::endgroup::"
 
-      - name: Archiviazione degli Artefatti locali
+      - name: Archive localized payload records
         uses: actions/upload-artifact@v4
         with:
           name: compiled-payload
@@ -192,31 +191,23 @@ jobs:
           retention-days: 7
           if-no-files-found: warn
 
-      - name: Native Git Commit and Push
+      - name: Commit and push static data package
         run: |
           set -euo pipefail
 
-          # 1. Controllo di sicurezza sull'esistenza del file generato
           if [ ! -s "guide.xml" ]; then
-            echo "::error::Il file guide.xml non è stato generato o è vuoto. Interrompo il push."
+            echo "::error::Target guide.xml is missing or empty. Aborting push."
             exit 1
           fi
 
-          echo "Configurazione delle credenziali Git locali..."
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
-
-          echo "Verifica dello stato delle modifiche..."
           git add guide.xml
 
-          # Verifica se ci sono differenze effettive rispetto al vecchio file per evitare commit vuoti
           if git diff --cached --quiet; then
-            echo "Nessuna modifica rilevata nel file guide.xml. Salto il commit."
+            echo "No changes detected. Skipping transaction."
           else
-            echo "Modifiche rilevate. Eseguo il commit locale..."
             git commit -m "Automated EPG Update: $(date -u +'%Y-%m-%d %H:%M:%S' -d '2 hours') (CEST)"
-            
-            echo "Eseguo il push sicuro dei dati sul repository principale..."
             git push origin main
-            echo "Process sync end. Repository aggiornato con successo."
+            echo "Process sync end. Workspace updated successfully."
           fi

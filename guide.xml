@@ -2588,7 +2588,7 @@
   <image>https://guidatv.sky.it/uuid/27865c78-a80f-437d-8417-75125db86915/cover?territory=IT&amp;md5ChecksumParam=c274430f5bf1729f8fd685f7ae02f415</image>
  </programme>
  <programme start="20260811050000 +0000" stop="20260811054000 +0000" channel="la7">
-  <title lang="it">Omnibus News</title>
+  <title lang="it">Ep. 333</title>
   <desc lang="it">S26 Ep333 - Programma di informazione e approfondimento con rubriche, ospiti, rassegna stampa, aggiornamenti sul traffico e previsioni meteo.</desc>
   <category lang="it">Informazione/News</category>
   <url>https://guidatv.sky.it/programmi-tv/news/omnibus-news/stagione-26/episodio-333/85cc451f-e96c-4e77-982f-b57b3ada1f78</url>
@@ -2611,7 +2611,7 @@
   <image>https://guidatv.sky.it/uuid/bbe41404-7ba5-46e4-aebf-08ea07d958a4/cover?territory=IT&amp;md5ChecksumParam=a92591ea1a6b1565d61b5b0d47f3428b</image>
  </programme>
  <programme start="20260811060000 +0000" stop="20260811064000 +0000" channel="la7">
-  <title lang="it">In onda</title>
+  <title lang="it">Ep. 43</title>
   <desc lang="it">S28 Ep43 - Condotto da Luca Telese e Marianna Aprile, il talk dedicato agli approfondimenti sui vari temi di attualita' politica e sociale, cronaca e costume.</desc>
   <category lang="it">Mondo e Tendenze/Magazine</category>
   <url>https://guidatv.sky.it/programmi-tv/magazine/in-onda/stagione-28/episodio-43/8b808e41-ab8b-440b-9845-0c380943305e</url>
@@ -2686,7 +2686,7 @@
   <image>https://guidatv.sky.it/uuid/25b0db1d-a77b-41af-bcc9-e50f4a0b0ad8/cover?territory=IT&amp;md5ChecksumParam=e15d2a7f064685066eaa6fdac8145664</image>
  </programme>
  <programme start="20260811180000 +0000" stop="20260811183500 +0000" channel="la7">
-  <title lang="it">TG La7 ore 20</title>
+  <title lang="it">Puntata del 09/08/2026</title>
   <desc lang="it">S2026 Ep221 Puntata del 09/08/2026 - Le notizie d'attualita' e i fatti di cronaca, di politica, di economia e societa', selezionati dalla redazione di La7.</desc>
   <category lang="it">Informazione/Notiziario</category>
   <url>https://guidatv.sky.it/programmi-tv/notiziario/tg-la7-edizione-delle-2000/stagione-2026/episodio-221/ee2c36a2-0708-44a7-ac38-ed8b5ca488d6</url>
@@ -2695,7 +2695,7 @@
   <image>https://guidatv.sky.it/uuid/e7d7146b-2d11-43fd-9d54-f51a5d169123/cover?territory=IT&amp;md5ChecksumParam=e6a0b8a2c52106293481fd57b3760cf6</image>
  </programme>
  <programme start="20260811183500 +0000" stop="20260811211500 +0000" channel="la7">
-  <title lang="it">In onda</title>
+  <title lang="it">Ep. 44</title>
   <desc lang="it">S28 Ep44 - Condotto da Luca Telese e Marianna Aprile, il talk dedicato agli approfondimenti sui vari temi di attualita' politica e sociale, cronaca e costume.</desc>
   <category lang="it">Mondo e Tendenze/Magazine</category>
   <url>https://guidatv.sky.it/programmi-tv/magazine/in-onda/stagione-28/episodio-44/39b8cbdd-385b-47a1-939a-e627089abbee</url>
@@ -2718,7 +2718,7 @@
   <image>https://guidatv.sky.it/uuid/48e3b0fd-41bd-4d6e-848c-da0bd9b444e2/cover?territory=IT&amp;md5ChecksumParam=4becdfa197205d9a30a3496840403b3f</image>
  </programme>
  <programme start="20260811232000 +0000" stop="20260811234500 +0000" channel="la7">
-  <title lang="it">Camera con vista</title>
+  <title lang="it">Ep. 32</title>
   <desc lang="it">S7 Ep32 - La sintesi senza filtri della settimana, con le piu' importanti novita' dal mondo della politica.</desc>
   <category lang="it">Mondo e Tendenze/Magazine</category>
   <url>https://guidatv.sky.it/programmi-tv/magazine/camera-con-vista/stagione-7/episodio-32/8108f7ed-3ba3-44e4-a713-aea492055285</url>
@@ -2727,7 +2727,7 @@
   <image>https://guidatv.sky.it/uuid/49106d13-a964-4537-a7a6-cebabc5f7374/cover?territory=IT&amp;md5ChecksumParam=82547e07911f81a8578fa56e374b066c</image>
  </programme>
  <programme start="20260811234500 +0000" stop="20260812030000 +0000" channel="la7">
-  <title lang="it">L'aria che tira</title>
+  <title lang="it">Famiglie D'Italia</title>
   <desc lang="it">S18 Ep30 Famiglie D'Italia - Un'analisi dell'economia e della politica italiane dal punto di vista di chi le vive ogni giorno. Conduce David Parenzo.</desc>
   <category lang="it">Informazione/News</category>
   <url>https://guidatv.sky.it/programmi-tv/news/laria-che-tira/stagione-18/episodio-30/c3f752ce-148b-4653-bfb8-ce2e148c1e09</url>
@@ -4913,7 +4913,7 @@
   <episode-num system="onscreen">S09E14</episode-num>
   <image>https://guidatv.sky.it/uuid/69bf5880-c75a-4fc6-a096-879b8d207d82/cover?territory=IT&amp;md5ChecksumParam=06eafb1387d863467287c2d8677d5c01</image>
  </programme>
- <programme start="20260811174500 +0000" stop="20260811194000 +0000" channel="tv8">
+ <programme start="20260811174500 +0000" stop="20260811192500 +0000" channel="tv8">
   <title lang="it">Juventus - Palermo</title>
   <desc lang="it">Penultimo test estivo per i bianconeri, finora: 0-0 contro il Basilea,1-0 allo Standard Liegi, 2-0 al Nizza, 1-0 al Chelsea e sconfitta contro l'Inter (2-1). TC: Federico Botti</desc>
   <category lang="it">Sport/Calcio</category>
@@ -4922,14 +4922,14 @@
   <episode-num system="onscreen">S01E05</episode-num>
   <image>https://guidatv.sky.it/uuid/3dc99304-638d-4dbc-b9c7-42e5e9cd5a03/cover?territory=IT&amp;md5ChecksumParam=378a585d22c055f5f0d23e10b4605eda</image>
  </programme>
- <programme start="20260811194000 +0000" stop="20260811221000 +0000" channel="tv8">
+ <programme start="20260811192500 +0000" stop="20260811220000 +0000" channel="tv8">
   <title lang="it">Skyfall</title>
   <desc lang="it">2 Oscar alla pellicola di Sam Mendes con Daniel Craig che interpreta per la terza volta 007. James Bond deve difendere M (Judi Dench) da un ex agente che la perseguita (Javier Bardem).</desc>
   <category lang="it">Film/Azione</category>
   <url>https://guidatv.sky.it/film/azione/skyfall/aba4f7f1-25f0-49fc-b06f-147b650e7e38</url>
   <image>https://guidatv.sky.it/uuid/aba4f7f1-25f0-49fc-b06f-147b650e7e38/cover?territory=IT&amp;md5ChecksumParam=f0538352984e15298ba77ae4f1c210c5</image>
  </programme>
- <programme start="20260811221000 +0000" stop="20260811235500 +0000" channel="tv8">
+ <programme start="20260811220000 +0000" stop="20260811234500 +0000" channel="tv8">
   <title lang="it">Ep. 6</title>
   <desc lang="it">... prezzo. S1 Ep6 - La Compagnia delle Tentazioni e' giunta alla fine dell'esperimento sociale: chi di loro avra' la possibilita' di dividersi il montepremi finale?</desc>
   <category lang="it">Intrattenimento/Show</category>
@@ -4938,14 +4938,14 @@
   <episode-num system="onscreen">S01E06</episode-num>
   <image>https://guidatv.sky.it/uuid/02f22907-4dfd-40ca-962f-44e40d1f0e13/cover?territory=IT&amp;md5ChecksumParam=927fbb93988f9137bc34a92bb5f2edba</image>
  </programme>
- <programme start="20260811235500 +0000" stop="20260812015500 +0000" channel="tv8">
+ <programme start="20260811234500 +0000" stop="20260812014500 +0000" channel="tv8">
   <title lang="it">Cani sciolti</title>
   <desc lang="it">Action senza tregua con Denzel Washington e Mark Wahlberg. Persa la protezione dei propri superiori, due agenti infiltrati nella malavita devono lottare per salvarsi la pelle.</desc>
   <category lang="it">Film/Azione</category>
   <url>https://guidatv.sky.it/film/azione/cani-sciolti/e1dde8b8-d1e7-4730-b021-1e769daa3cc4</url>
   <image>https://guidatv.sky.it/uuid/e1dde8b8-d1e7-4730-b021-1e769daa3cc4/cover?territory=IT&amp;md5ChecksumParam=a01633e3c8527950d32f91821cfdb9ca</image>
  </programme>
- <programme start="20260812015500 +0000" stop="20260812025000 +0000" channel="tv8">
+ <programme start="20260812014500 +0000" stop="20260812023500 +0000" channel="tv8">
   <title lang="it">Lisa Dolph Hostetter</title>
   <desc lang="it">S23 Ep10 Lisa Dolph Hostetter - Sono delicate, sono fragili. Sono generose, sono vanitose. Sono innamorate, vengono ferite, diventano vendicative e anche assassine. Chi sono queste donne spietate? E perche' uccidono?</desc>
   <category lang="it">Intrattenimento/Reality Show</category>
@@ -4954,7 +4954,7 @@
   <episode-num system="onscreen">S23E10</episode-num>
   <image>https://guidatv.sky.it/uuid/b4413291-c2dc-43f7-98b1-ec327fda3e55/cover?territory=IT&amp;md5ChecksumParam=888b3d43e6c17229870d30d3251bdcc8</image>
  </programme>
- <programme start="20260812025000 +0000" stop="20260812033000 +0000" channel="tv8">
+ <programme start="20260812023500 +0000" stop="20260812031500 +0000" channel="tv8">
   <title lang="it">Melanie Eam</title>
   <desc lang="it">S30 Ep12 Melanie Eam - Sono delicate, sono fragili. Sono generose, sono vanitose. Sono innamorate, vengono ferite, diventano vendicative e anche assassine. Chi sono queste donne spietate? E perche' uccidono?</desc>
   <category lang="it">Intrattenimento/Reality Show</category>
@@ -4963,7 +4963,7 @@
   <episode-num system="onscreen">S30E12</episode-num>
   <image>https://guidatv.sky.it/uuid/7fe0cd2d-338a-4d90-97fb-a8f6abb52082/cover?territory=IT&amp;md5ChecksumParam=888b3d43e6c17229870d30d3251bdcc8</image>
  </programme>
- <programme start="20260812033000 +0000" stop="20260812040000 +0000" channel="tv8">
+ <programme start="20260812031500 +0000" stop="20260812034000 +0000" channel="tv8">
   <title lang="it">Na Pizza S.3 Ep.04</title>
   <desc lang="it">S3 Ep4 Na Pizza S.3 Ep.04 - In questa puntata Renato Bosco ospitera' Antonio Fusco, giovane talento pugliese che ha portato a Milano il suo innovativo concetto di pizza.</desc>
   <category lang="it">Intrattenimento/Show</category>
@@ -4971,6 +4971,24 @@
   <episode-num system="xmltv_ns">2.3.0/1</episode-num>
   <episode-num system="onscreen">S03E04</episode-num>
   <image>https://guidatv.sky.it/uuid/85ca50ed-5b5c-4fe1-8d56-71419baa4495/COVER_TITLE_TALL?territory=IT&amp;version=0dd193f4-fa4b-3e06-87f6-d1e5ef37cc2a&amp;w=600&amp;h=800&amp;md5ChecksumParam=565194ef919a3602483485ea546dfad0</image>
+ </programme>
+ <programme start="20260812034000 +0000" stop="20260812035000 +0000" channel="tv8">
+  <title lang="it">Alessandro Borghese Kitchen Sound Menù - Stag. Alessandro Borghese Kitchen Sound S.10 Menù - Alessandro Borghese Kitchen Sound 10 Menù Ep.04 - Borghese Al Dente</title>
+  <desc lang="it">S09 Ep22 - S09 Ep22</desc>
+  <category lang="it">Intrattenimento/Show</category>
+  <url>https://guidatv.sky.it/programmi-tv/show/alessandro-borghese-kitchen-sound/stagione-10/episodio-4/f0fdb8df-47fd-4508-b5a4-afc15b0e0284</url>
+  <episode-num system="xmltv_ns">9.3.0/1</episode-num>
+  <episode-num system="onscreen">S10E04</episode-num>
+  <image>https://guidatv.sky.it/uuid/f0fdb8df-47fd-4508-b5a4-afc15b0e0284/cover?territory=IT&amp;md5ChecksumParam=cc733dcf80d6a8ce8a521bdbdc972511</image>
+ </programme>
+ <programme start="20260812035000 +0000" stop="20260812040000 +0000" channel="tv8">
+  <title lang="it">Kids</title>
+  <desc lang="it">S9 Ep23 Kids - Alessandro Borghese, con la preziosa consulenza del pediatra Luca Rosti, si cimentera' in cucina con piatti fantasiosi e sani pensati e dedicati ai piu' piccoli.</desc>
+  <category lang="it">Intrattenimento/Show</category>
+  <url>https://guidatv.sky.it/programmi-tv/show/alessandro-borghese-kitchen-sound/stagione-9/episodio-21/19a2967a-00db-44b2-bf24-03c38f4155c9</url>
+  <episode-num system="xmltv_ns">8.20.0/1</episode-num>
+  <episode-num system="onscreen">S09E21</episode-num>
+  <image>https://guidatv.sky.it/uuid/19a2967a-00db-44b2-bf24-03c38f4155c9/cover?territory=IT&amp;md5ChecksumParam=69fc06e0d2d019d659ca4667da0e38fd</image>
  </programme>
  <programme start="20260812040000 +0000" stop="20260812042500 +0000" channel="tv8">
   <title lang="it">TG24 Pagine</title>
@@ -12097,7 +12115,7 @@
  <channel id="livenowfromfox">
   <display-name>LiveNOW from FOX</display-name>
  </channel>
- <programme start="20260811000000 +0000" stop="20260811113000 +0000" channel="abc-news-live">
+ <programme start="20260811000000 +0000" stop="20260811120000 +0000" channel="abc-news-live">
   <title lang="en">ABC News Live</title>
   <sub-title lang="en">ABC News Live</sub-title>
   <desc lang="en">no info available</desc>
@@ -12107,19 +12125,6 @@
   <icon src="https://images.pluto.tv/channels/6508be683a0d700008c534e4/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600" />
   <rating>
    <value>no rating</value>
-  </rating>
- </programme>
- <programme start="20260811113000 +0000" stop="20260811120000 +0000" channel="abc-news-live">
-  <title lang="en">Start Here</title>
-  <sub-title lang="en">Start Here</sub-title>
-  <desc lang="en">Hosted by Brad Mielke, the video version of ABC News' daily podcast dives straight to the heart of the stories that are driving national conversations.</desc>
-  <category lang="en">News &amp; Information</category>
-  <category lang="en">News &amp; Information</category>
-  <icon src="https://images.pluto.tv/series/65243fad3e6938001a9d864f/tile.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=660&amp;q=75&amp;w=660" />
-  <episode-num system="xmltv_ns">0.141.0/1</episode-num>
-  <episode-num system="onscreen">S01E142</episode-num>
-  <rating>
-   <value>Not Rated</value>
   </rating>
  </programme>
  <programme start="20260811120000 +0000" stop="20260811133000 +0000" channel="abc-news-live">
@@ -12625,7 +12630,33 @@
    <value>Not Rated</value>
   </rating>
  </programme>
- <programme start="20260812133000 +0000" stop="20260814233000 +0000" channel="abc-news-live">
+ <programme start="20260812133000 +0000" stop="20260812140000 +0000" channel="abc-news-live">
+  <title lang="en">ABC News Live First</title>
+  <sub-title lang="en">ABC News Live First</sub-title>
+  <desc lang="en">The latest headlines, compelling stories, interviews and roundtable discussions.</desc>
+  <category lang="en">News &amp; Information</category>
+  <category lang="en">News &amp; Information</category>
+  <icon src="https://images.pluto.tv/series/65243fb43e6938001a9d9108/tile_1776279942593.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=660&amp;q=75&amp;w=660" />
+  <episode-num system="xmltv_ns">0.499.0/1</episode-num>
+  <episode-num system="onscreen">S01E500</episode-num>
+  <rating>
+   <value>Not Rated</value>
+  </rating>
+ </programme>
+ <programme start="20260812140000 +0000" stop="20260812143000 +0000" channel="abc-news-live">
+  <title lang="en">ABC News Live First</title>
+  <sub-title lang="en">ABC News Live First</sub-title>
+  <desc lang="en">The latest headlines, compelling stories, interviews and roundtable discussions.</desc>
+  <category lang="en">News &amp; Information</category>
+  <category lang="en">News &amp; Information</category>
+  <icon src="https://images.pluto.tv/series/65243fb43e6938001a9d9108/tile_1776279942593.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=660&amp;q=75&amp;w=660" />
+  <episode-num system="xmltv_ns">0.497.0/1</episode-num>
+  <episode-num system="onscreen">S01E498</episode-num>
+  <rating>
+   <value>Not Rated</value>
+  </rating>
+ </programme>
+ <programme start="20260812143000 +0000" stop="20260814233000 +0000" channel="abc-news-live">
   <title lang="en">ABC News Live</title>
   <sub-title lang="en">ABC News Live</sub-title>
   <desc lang="en">no info available</desc>
@@ -12726,7 +12757,18 @@
    <value>Not Rated</value>
   </rating>
  </programme>
- <programme start="20260812140000 +0000" stop="20260814233000 +0000" channel="livenowfromfox">
+ <programme start="20260812140000 +0000" stop="20260812180000 +0000" channel="livenowfromfox">
+  <title lang="en">LiveNOW from FOX</title>
+  <sub-title lang="en">LiveNOW from FOX</sub-title>
+  <desc lang="en">Live 24/7; always on; raw and unfiltered breaking news, live events and stories from across the nation.</desc>
+  <category lang="en">News &amp; Information</category>
+  <category lang="en">News &amp; Information</category>
+  <icon src="https://images.pluto.tv/series/66a2af1b7e51670013385bcc/tile_1751396694304.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=660&amp;q=75&amp;w=660" />
+  <rating>
+   <value>Not Rated</value>
+  </rating>
+ </programme>
+ <programme start="20260812180000 +0000" stop="20260814233000 +0000" channel="livenowfromfox">
   <title lang="en">LiveNOW from FOX</title>
   <sub-title lang="en">LiveNOW from FOX</sub-title>
   <desc lang="en">no info available</desc>

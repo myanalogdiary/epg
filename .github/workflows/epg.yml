@@ -1,196 +1,242 @@
-name: Data Engine
+name: EPG Core Process and Gist Sync
 
 on:
   schedule:
-    - cron: '0 11 * * *'
+    # Schedulazione d'esempio (es. ogni giorno alle 4 del mattino), personalizzabile
+    - cron: '0 4 * * *'
   workflow_dispatch:
-
-permissions:
-  contents: read
 
 jobs:
   core_process:
-    concurrency:
-      group: sync-env
-      cancel-in-progress: true
-    runs-on: ubuntu-latest
-    timeout-minutes: 35
-    
+    name: core_process
+    runs-on: ubuntu-24.04
+
     env:
-      PER_SITE_JOBS: "10"
-      
+      PER_SITE_JOBS: 10
+      NODE_OPTIONS: --max-old-space-size=6000
+
     steps:
-      - name: Fetch Repository Sources
+      - name: Checkout repository principale
         uses: actions/checkout@v4
+        with:
+          repository: myanalogdiary/epg
+          fetch-depth: 1
 
-      - name: Fetch Submodule Dependencies
-        run: git clone --depth 1 https://github.com/iptv-org/epg.git
+      - name: Clonazione repository epg esterno
+        run: |
+          git clone --depth 1 https://github.com/iptv-org/epg.git
 
-      - name: Set Runtime Environment
+      - name: Configurazione ambiente Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "22"
-          cache: "npm"
+          node-version: 24
+          cache: npm
           cache-dependency-path: epg/package-lock.json
 
-      - name: Execute Main Task
-        id: task_execution
-        shell: bash
-        env:
-          NODE_OPTIONS: "--max-old-space-size=6000"
-          PIPELINE: |
-            #!/usr/bin/env bash
-            set -euo pipefail
-            OUTDIR="${OUTDIR:-$RUNNER_TEMP}"; export OUTDIR
-            
-            echo "::group::Runtime Preparation"
-            pushd epg >/dev/null
-            npm ci --no-audit --no-fund --silent
-            popd >/dev/null
-            echo "::endgroup::"
-            
-            echo "::group::Structure Validation"
-            test -s "${GITHUB_WORKSPACE}/channels.xml"
-            
-            python << 'PY'
-            import os, json, xml.etree.ElementTree as ET
-            gw=os.environ["GITHUB_WORKSPACE"]; outdir=os.environ["OUTDIR"]
-            
-            r=ET.parse(os.path.join(gw,"channels.xml")).getroot(); mp={}
-            for ch in r.findall("channel"):
-                site=(ch.get("site") or "").strip().lower()
-                if site: mp.setdefault(site, []).append(ch)
-                
-            os.makedirs(outdir, exist_ok=True)
-            for site, ch_list in mp.items():
-                root=ET.Element("channels")
-                for ch in ch_list: root.append(ch)
-                try: ET.indent(root,space="  ",level=0)
-                except: pass
-                ET.ElementTree(root).write(
-                    os.path.join(outdir,f"_all_{site}.channels.xml"),
-                    encoding="utf-8",xml_declaration=True
-                )
-            PY
-            echo "::endgroup::"
-            
-            cat <<'BASH' > "${RUNNER_TEMP}/helpers.sh"
-            set -euo pipefail
-            tune_params() { local s="$1" maxc=18 tout=25000; echo "$maxc $tout"; }
-            filter_log() { awk '/^\s*info\s+\[[0-9]+\/[0-9]+\].*\([0-9]+ programs\)/||/saving to/||/^\s*success\s+done/'; }
-            throttle(){ local lim="${PER_SITE_JOBS:-10}"; while [ "$(jobs -rp | wc -l)" -ge "$lim" ]; do wait -n || true; done; }
-            
-            retry_grab() {
-                local ch="$1" site="$2" out="$3" maxc="$4" tout="$5"
-                echo "Processing $site"
-                SECONDS=0
-                try(){ npm run grab -- --channels="$ch" --days=2 --maxConnections="$maxc" --timeout="$tout" --output="$out" | filter_log; }
-                if (try) || (sleep 2 && try) || (sleep 4 && try); then
-                    return 0
-                else
-                    return 1
-                fi
-            }
-            
-            run_block() {
-                shopt -s nullglob
-                local prefix="$1" outdir="$2"
-                for f in "${OUTDIR}/${prefix}_"*.channels.xml; do
-                    [ -s "$f" ] || continue
-                    grep -q '<channel' "$f" || continue
-                    local site="$(basename "$f")"; site="${site#${prefix}_}"; site="${site%.channels.xml}"
-                    read MAXC TOUT < <(tune_params "$site")
-                    local out="${outdir}/${prefix}_${site}.xml"
-                    throttle; (
-                        if retry_grab "$f" "$site" "$out" "$MAXC" "$TOUT"; then
-                            echo "Success: $site"
-                        else
-                            echo "Failed: $site"; : > "$out"
-                        fi
-                    ) &
-                done
-                wait || true
-            }
-            BASH
-            
-            echo "::group::Data Matrix Compilation"
-            pushd epg >/dev/null
-            source "${RUNNER_TEMP}/helpers.sh"
-            mkdir -p "${OUTDIR}/out-all"
-            run_block "_all" "${OUTDIR}/out-all"
-            popd >/dev/null
-            echo "::endgroup::"
-            
-            echo "::group::Data Merge System"
-            python << 'PY'
-            import os, glob, xml.etree.ElementTree as ET
-            gw=os.environ["GITHUB_WORKSPACE"]; temp=os.environ["OUTDIR"]
-            files=sorted([f for f in glob.glob(os.path.join(temp, "out-all","_all_*.xml")) if os.path.isfile(f) and os.path.getsize(f)>0])
-            
-            if not files:
-                with open(os.path.join(gw,"guide.xml"), "w", encoding="utf-8") as f:
-                    f.write('<?xml version="1.0" encoding="UTF-8"?>\n<tv></tv>')
-            else:
-                t0=ET.parse(files[0]); r0=t0.getroot()
-                chs=set(c.get("id", "") for c in r0.findall("channel"))
-                progs=set((p.get("channel", ""), p.get("start", "")) for p in r0.findall("programme"))
-                for pth in files[1:]:
-                    try: r=ET.parse(pth).getroot()
-                    except: continue
-                    for c in r.findall("channel"):
-                        cid=c.get("id","")
-                        if cid and cid not in chs:
-                            r0.append(c); chs.add(cid)
-                    for pr in r.findall("programme"):
-                        k=(pr.get("channel", ""), pr.get("start",""))
-                        if k not in progs:
-                            r0.append(pr); progs.add(k)
-                try: ET.indent(t0,space="  ", level=0)
-                except: pass
-                out_guide=os.path.join(gw,"guide.xml")
-                t0.write(out_guide,encoding="utf-8",xml_declaration=True)
-                print("Process finished.")
-            PY
-            echo "::endgroup::"
+      - name: Runtime Preparation & Structure Validation
         run: |
           set -euo pipefail
-          printf '%s\n' "$PIPELINE" > "$RUNNER_TEMP/pipeline.sh"
-          chmod +x "$RUNNER_TEMP/pipeline.sh"
-          bash "$RUNNER_TEMP/pipeline.sh" 2>&1 | tee "$GITHUB_WORKSPACE/output.log"
+          OUTDIR="${RUNNER_TEMP}"
+          export OUTDIR
+          
+          echo "::group::Runtime Preparation"
+          pushd epg >/dev/null
+          npm ci --no-audit --no-fund --silent
+          popd >/dev/null
+          echo "::endgroup::"
+          
+          echo "::group::Structure Validation"
+          if [ ! -s "${GITHUB_WORKSPACE}/channels.xml" ]; then
+            echo "::error::Il file channels.xml risulta vuoto o mancante!"
+            exit 1
+          fi
+          
+          python3 << 'PY'
+          import os, glob, xml.etree.ElementTree as ET
+          gw = os.environ["GITHUB_WORKSPACE"]
+          outdir = os.environ["OUTDIR"]
+          try:
+              r = ET.parse(os.path.join(gw, "channels.xml")).getroot()
+          except Exception as e:
+              print(f"Errore parsing channels.xml: {e}")
+              exit(1)
+          mp = {}
+          for ch in r.findall("channel"):
+              site = (ch.get("site") or "").strip().lower()
+              if site:
+                  mp.setdefault(site, []).append(ch)
+          os.makedirs(outdir, exist_ok=True)
+          for site, ch_list in mp.items():
+              root = ET.Element("channels")
+              for ch in ch_list:
+                  root.append(ch)
+              try:
+                  ET.indent(root, space=" ", level=0)
+              except:
+                  pass
+              ET.ElementTree(root).write(
+                  os.path.join(outdir, f"_all_{site}.channels.xml"),
+                  encoding="utf-8", xml_declaration=True
+              )
+          print("Struttura XML validata e frammentata con successo.")
+          PY
+          echo "::endgroup::"
 
-      - name: Export Execution Records
-        uses: actions/upload-artifact@v4
-        with:
-          name: runtime-records
-          path: output.log
-          if-no-files-found: warn
-          retention-days: 7
+      - name: Data Matrix Compilation & Merge
+        run: |
+          set -euo pipefail
+          OUTDIR="${RUNNER_TEMP}"
+          export OUTDIR
+          
+          cat <<'BASH' > "${RUNNER_TEMP}/helpers.sh"
+          set -euo pipefail
+          tune_params() { local s="$1" maxc=18 tout=25000; echo "$maxc $tout"; }
+          filter_log() { awk '/^\s*info\s+\[[0-9]+\/[0-9]+\].*\([0-9]+ programs\)/||/saving to/||/^\s*success\s+done/'; }
+          throttle(){ local lim="${PER_SITE_JOBS:-10}"; while [ "$(jobs -rp | wc -l)" -ge "$lim" ]; do wait -n || true; done; }
+          retry_grab() {
+            local ch="$1" site="$2" out="$3" maxc="$4" tout="$5"
+            echo "Processing $site"
+            local try_status=1
+            for delay in 0 2 4; do
+              sleep $delay
+              if npm run grab -- --channels="$ch" --days=2 --maxConnections="$maxc" --timeout="$tout" --output="$out" 2>&1 | filter_log; then
+                try_status=0
+                break
+              fi
+            done
+            return $try_status
+          }
+          run_block() {
+            shopt -s nullglob
+            local prefix="$1" outdir="$2"
+            for f in "${OUTDIR}/${prefix}_"*.channels.xml; do
+              [ -s "$f" ] || continue
+              grep -q '<channel' "$f" || continue
+              local site="$(basename "$f")"
+              site="${site#${prefix}_}"
+              site="${site%.channels.xml}"
+              read -r MAXC TOUT < <(tune_params "$site")
+              local out="${outdir}/${prefix}_${site}.xml"
+              throttle
+              (
+                if retry_grab "$f" "$site" "$out" "$MAXC" "$TOUT"; then
+                  echo "Success: $site"
+                else
+                  echo "Failed: $site"
+                  : > "$out"
+                fi
+              ) &
+            done
+            wait || true
+          }
+          BASH
+          
+          echo "::group::Data Matrix Compilation"
+          pushd epg >/dev/null
+          source "${RUNNER_TEMP}/helpers.sh"
+          mkdir -p "${OUTDIR}/out-all"
+          run_block "_all" "${OUTDIR}/out-all"
+          popd >/dev/null
+          echo "::endgroup::"
+          
+          echo "::group::Data Merge System"
+          python3 << 'PY'
+          import os, glob, xml.etree.ElementTree as ET
+          gw = os.environ["GITHUB_WORKSPACE"]
+          temp = os.environ["OUTDIR"]
+          files = sorted([f for f in glob.glob(os.path.join(temp, "out-all", "_all_*.xml")) if os.path.isfile(f) and os.path.getsize(f) > 0])
+          if not files:
+              print("Nessun payload generato dai grabber. Creo un file guide.xml vuoto di fallback.")
+              with open(os.path.join(gw, "guide.xml"), "w", encoding="utf-8") as f:
+                  f.write('<?xml version="1.0" encoding="UTF-8"?>\n<tv></tv>')
+          else:
+              try:
+                  t0 = ET.parse(files[0])
+                  r0 = t0.getroot()
+              except Exception as e:
+                  print(f"Errore critico sul primo file XML: {e}")
+                  exit(1)
+              chs = set(c.get("id", "") for c in r0.findall("channel"))
+              progs = set((p.get("channel", ""), p.get("start", "")) for p in r0.findall("programme"))
+              for pth in files[1:]:
+                  try:
+                      r = ET.parse(pth).getroot()
+                  except:
+                      continue
+                  for c in r.findall("channel"):
+                      cid = c.get("id", "")
+                      if cid and cid not in chs:
+                          r0.append(c)
+                          chs.add(cid)
+                  for pr in r.findall("programme"):
+                      k = (pr.get("channel", ""), pr.get("start", ""))
+                      if k not in progs:
+                          r0.append(pr)
+                          progs.add(k)
+              try:
+                  ET.indent(t0, space=" ", level=0)
+              except:
+                  pass
+              out_guide = os.path.join(gw, "guide.xml")
+              t0.write(out_guide, encoding="utf-8", xml_declaration=True)
+              print("Process finished. guide.xml compilato con successo.")
+          PY
+          echo "::endgroup::"
 
-      - name: Export Output Payload
+      - name: Archiviazione degli Artefatti locali
         uses: actions/upload-artifact@v4
         with:
           name: compiled-payload
           path: guide.xml
           retention-days: 7
+          if-no-files-found: warn
 
-      - name: Sync Cloud Database
+      - name: Robust JSON Payload Generation & Gist Sync
         env:
           GIST_PAT: ${{ secrets.GIST_PAT }}
           GIST_ID: ${{ secrets.GIST_ID }}
         run: |
           set -euo pipefail
           
-          # Generazione robusta del payload JSON iniettando il file xml come stringa pura pulita
+          # 1. Validazione preventiva delle variabili segrete
+          if [ -z "${GIST_PAT:-}" ] || [ -z "${GIST_ID:-}" ]; then
+            echo "::error::Uno o entrambi i segreti (GIST_PAT, GIST_ID) non sono stati trovati nel repository GitHub!"
+            exit 1
+          fi
+
+          # 2. Controllo esistenza e integrità del file sorgente
+          if [ ! -s "guide.xml" ]; then
+            echo "::error::Il file guide.xml non esiste o è vuoto. Impossibile sincronizzare."
+            exit 1
+          fi
+
+          echo "Generazione pulita e robusta del payload JSON..."
+          # Genera il file JSON inserendo l'intero contenuto XML in modo sicuro come stringa raw
           jq -n --rawfile xml_content guide.xml '{files: {"guide.xml": {content: $xml_content}}}' > json_payload.json
-          
-          curl -L \
+
+          echo "Inizio sincronizzazione sicura verso l'endpoint API ufficiale dei Gist..."
+          # Esegue la chiamata PATCH all'endpoint corretto (://github.com) salvando l'HTTP status code
+          HTTP_STATUS=$(curl -s -w "%{http_code}" -o response_details.txt -L \
             -X PATCH \
             -H "Accept: application/vnd.github+json" \
-            -H "Authorization: Bearer $GIST_PAT" \
+            -H "Authorization: Bearer ${GIST_PAT}" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
             -H "Content-Type: application/json" \
-            https://github.com \
-            -d @json_payload.json
-            
+            https://://github.com/gists/${GIST_ID} \
+            -d @json_payload.json)
+
+          # Rimuove immediatamente il file di payload temporaneo per sicurezza
           rm -f json_payload.json
-          echo "Process sync end."
+
+          # 3. Analisi dettagliata dell'esito della chiamata REST API
+          if [ "$HTTP_STATUS" -eq 200 ]; then
+            echo "Process sync end. Il file xml è stato iniettato e aggiornato nel tuo Gist (HTTP 200)."
+          else
+            echo "::error::La sincronizzazione ha fallito con codice HTTP ${HTTP_STATUS}"
+            echo "Dettagli della risposta dell'API di GitHub:"
+            cat response_details.txt
+            rm -f response_details.txt
+            exit 1
+          fi
+          
+          rm -f response_details.txt

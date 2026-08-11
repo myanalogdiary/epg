@@ -25,7 +25,7 @@ jobs:
 
       - name: Fetch Submodule Dependencies
         run: git clone --depth 1 https://github.com/iptv-org/epg.git
-
+        
       - name: Set Runtime Environment
         uses: actions/setup-node@v4
         with:
@@ -84,7 +84,7 @@ jobs:
                 local ch="$1" site="$2" out="$3" maxc="$4" tout="$5"
                 echo "Processing $site"
                 SECONDS=0
-                try(){ npm run grab -- --channels="$ch" --days=4 --maxConnections="$maxc" --timeout="$tout" --output="$out" | filter_log; }
+                try(){ npm run grab -- --channels="$ch" --days=2 --maxConnections="$maxc" --timeout="$tout" --output="$out" | filter_log; }
                 if (try) || (sleep 2 && try) || (sleep 4 && try); then
                     return 0
                 else
@@ -179,12 +179,14 @@ jobs:
           GIST_ID: ${{ secrets.GIST_ID }}
         run: |
           set -euo pipefail
-          GUIDE_CONTENT=$(jq -Rs . guide.xml)
+          jq -Rs '. as $content | {files: {"guide.xml": {content: $content}}}' guide.xml > json_payload.json
           curl -L \
             -X PATCH \
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer $GIST_PAT" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
+            -H "Content-Type: application/json" \
             https://github.com \
-            -d "{\"files\": {\"guide.xml\": {\"content\": $GUIDE_CONTENT}}}"
+            -d @json_payload.json
+          rm -f json_payload.json
           echo "Process sync end."

@@ -13,7 +13,7 @@
   <display-name>Food Network</display-name>
  </channel>
  <channel id="discovery">
-  <display-name>Discovery Channel I</display-name>
+  <display-name>Discovery</display-name>
  </channel>
  <channel id="giallo">
   <display-name>Giallo</display-name>
@@ -1930,13 +1930,13 @@
   <display-name>Radio Italia TV</display-name>
  </channel>
  <channel id="rtl-102-5-tv">
-  <display-name>RTL 102.5 HD</display-name>
+  <display-name>RTL 102.5</display-name>
  </channel>
  <channel id="boing">
   <display-name>Boing</display-name>
  </channel>
  <channel id="cartoonito">
-  <display-name>CARTOONITO DTT</display-name>
+  <display-name>Cartoonito</display-name>
  </channel>
  <channel id="super">
   <display-name>Super!</display-name>
@@ -6040,7 +6040,7 @@
   <episode-num system="onscreen">S08E09</episode-num>
   <image>https://static2.mediasetplay.mediaset.it/Mediaset_Italia_Production_-_Main/F304247101000903/media/0/0/9cb06acd-3918-4ec6-aa1b-37708486a4d1/21c14a0b-7042-4a1a-9be2-ce8692071319.jpg</image>
  </programme>
- <programme start="20260812092700 +0000" stop="20260812095000 +0000" channel="20">
+ <programme start="20260812092700 +0000" stop="20260812095100 +0000" channel="20">
   <title lang="it">THE BIG BANG THEORY</title>
   <sub-title lang="it">Ep. 6 - La risonanza delle romanticherie</sub-title>
   <desc lang="it">Howard scrive una canzone per celebrare l'anniversario del primo incontro con Bernadette.</desc>
@@ -6049,7 +6049,7 @@
   <episode-num system="onscreen">S07E06</episode-num>
   <image>https://static2.mediasetplay.mediaset.it/Mediaset_Italia_Production_-_Main/F305550001000603/epg/media/3/3/c93d379e-17a9-4ca6-82ce-c1cbf6fd9597/ce3b1a71-369b-42dd-9ec5-ef8aa4fc8ecb.jpg</image>
  </programme>
- <programme start="20260812095000 +0000" stop="20260812101300 +0000" channel="20">
+ <programme start="20260812095100 +0000" stop="20260812101300 +0000" channel="20">
   <title lang="it">THE BIG BANG THEORY</title>
   <sub-title lang="it">Ep. 7 - La dimissione del divulgatore</sub-title>
   <desc lang="it">L'idolo d'infanzia di Sheldon, il professor Proton, chiede a Leonard di collaborare ad una sua ricerca.</desc>
@@ -6076,7 +6076,7 @@
   <episode-num system="onscreen">S03E08</episode-num>
   <image>https://static2.mediasetplay.mediaset.it/Mediaset_Italia_Production_-_Main/F312201701000802/epg/media/28/92/d1e87c17-0b5e-4f33-98f5-5a71c39b6c7a/da6c7fd6-e6d8-4b8a-b1e2-24019b161130.jpg</image>
  </programme>
- <programme start="20260812114900 +0000" stop="20260812123300 +0000" channel="20">
+ <programme start="20260812114900 +0000" stop="20260812123400 +0000" channel="20">
   <title lang="it">Chicago Fire</title>
   <sub-title lang="it">Ep. 19 - Fino a che cambia il tempo</sub-title>
   <desc lang="it">Una notte di temporale crea seri problemi alla Caserma 51. Su tutti, l'assenza di corrente elettrica che rischia di ostacolare il servizio di soccorso.</desc>
@@ -6085,7 +6085,7 @@
   <episode-num system="onscreen">S07E19</episode-num>
   <image>https://static2.mediasetplay.mediaset.it/Mediaset_Italia_Production_-_Main/F309370301001904/media/23/87/9335ed9c-2733-42c2-b8fa-e983b4033486/75d76f20-a4f3-452c-82ab-5c8e3d9d7af7.jpg</image>
  </programme>
- <programme start="20260812123300 +0000" stop="20260812132100 +0000" channel="20">
+ <programme start="20260812123400 +0000" stop="20260812132100 +0000" channel="20">
   <title lang="it">Chicago Med</title>
   <episode-num system="xmltv_ns">6.17.0/1</episode-num>
   <episode-num system="onscreen">S07E18</episode-num>
@@ -6113,7 +6113,7 @@
   <episode-num system="onscreen">S04E15</episode-num>
   <image>https://static2.mediasetplay.mediaset.it/Mediaset_Italia_Production_-_Main/F303492601001503/media/17/81/270fb217-47e2-4ea2-9800-9093cfe3091a/11c70f31-cbfa-475d-9764-31e50dfcc26a.jpg</image>
  </programme>
- <programme start="20260812154900 +0000" stop="20260812163700 +0000" channel="20">
+ <programme start="20260812154900 +0000" stop="20260812163800 +0000" channel="20">
   <title lang="it">Dr. House - Medical division</title>
   <sub-title lang="it">Ep. 8 - Rischi di paranoia</sub-title>
   <desc lang="it">Tommy, un pubblico ministero, viene ricoverato al Plainsboro per un sospetto infarto, ma i test lo escludono.</desc>
@@ -6122,7 +6122,7 @@
   <episode-num system="onscreen">S08E08</episode-num>
   <image>https://static2.mediasetplay.mediaset.it/Mediaset_Italia_Production_-_Main/F304247101000803/media/22/86/032777b2-30c6-40c1-b705-d68d7a85c56c/5aafa4c3-9348-4fc1-b863-4cdf6ca5346e.jpg</image>
  </programme>
- <programme start="20260812163700 +0000" stop="20260812173100 +0000" channel="20">
+ <programme start="20260812163800 +0000" stop="20260812173100 +0000" channel="20">
   <title lang="it">Dr. House - Medical division</title>
   <sub-title lang="it">Ep. 9 - L'altra metà</sub-title>
   <desc lang="it">Foreman affida al team di House il caso di un uomo malato di Alzheimer. Poiche' Taub e' assente, Foreman chiede di partecipare alle riunioni di diagnostica.</desc>
@@ -6131,7 +6131,7 @@
   <episode-num system="onscreen">S08E09</episode-num>
   <image>https://static2.mediasetplay.mediaset.it/Mediaset_Italia_Production_-_Main/F304247101000903/media/0/0/9cb06acd-3918-4ec6-aa1b-37708486a4d1/21c14a0b-7042-4a1a-9be2-ce8692071319.jpg</image>
  </programme>
- <programme start="20260812173100 +0000" stop="20260812181700 +0000" channel="20">
+ <programme start="20260812173100 +0000" stop="20260812181800 +0000" channel="20">
   <title lang="it">Chicago Fire</title>
   <sub-title lang="it">Ep. 19 - Fino a che cambia il tempo</sub-title>
   <desc lang="it">Una notte di temporale crea seri problemi alla Caserma 51. Su tutti, l'assenza di corrente elettrica che rischia di ostacolare il servizio di soccorso.</desc>
@@ -6140,7 +6140,7 @@
   <episode-num system="onscreen">S07E19</episode-num>
   <image>https://static2.mediasetplay.mediaset.it/Mediaset_Italia_Production_-_Main/F309370301001904/media/23/87/9335ed9c-2733-42c2-b8fa-e983b4033486/75d76f20-a4f3-452c-82ab-5c8e3d9d7af7.jpg</image>
  </programme>
- <programme start="20260812181700 +0000" stop="20260812184200 +0000" channel="20">
+ <programme start="20260812181800 +0000" stop="20260812184200 +0000" channel="20">
   <title lang="it">THE BIG BANG THEORY</title>
   <sub-title lang="it">Ep. 6 - La risonanza delle romanticherie</sub-title>
   <desc lang="it">Howard scrive una canzone per celebrare l'anniversario del primo incontro con Bernadette.</desc>
@@ -6869,21 +6869,28 @@
   <category lang="it">Intrattenimento</category>
   <image>https://static2.mediasetplay.mediaset.it/Mediaset_Italia_Production_-_Main/F314350601006104/media/20/84/c77e3008-0a1f-4804-a9ac-5ece77d14c33/7feed371-c739-45a8-b292-70a47db1c1a9.jpg</image>
  </programme>
- <programme start="20260812151900 +0000" stop="20260812160900 +0000" channel="canale-5">
+ <programme start="20260812151900 +0000" stop="20260812152700 +0000" channel="canale-5">
+  <title lang="it">Tutto per la mia famiglia - PrimaTv</title>
+  <sub-title lang="it">Episodio 11</sub-title>
+  <desc lang="it">Mentre gli Eren si preparano per iniziare la giornata, Sengul ascolta una telefonata di Cemile e capisce che sta per vedersi con sua sorella.</desc>
+  <category lang="it">Intrattenimento</category>
+  <image>https://static2.mediasetplay.mediaset.it/Mediaset_Italia_Production_-_Main/F313587401001104/media/24/88/f6d81d44-67cf-47a1-8cdd-c5f1e1c4ba5b/c7db1d63-aea5-428b-99ba-4950e74059b1.jpg</image>
+ </programme>
+ <programme start="20260812152700 +0000" stop="20260812161700 +0000" channel="canale-5">
   <title lang="it">Tutto per la mia famiglia - PrimaTv</title>
   <sub-title lang="it">Ep. 12 - Tutto per la mia famiglia ii, 75</sub-title>
   <desc lang="it">In ospedale sono tutti in attesa che Ogulcan esca dal coma. Sengul accusa Kadir di avere troppa compassione per le persone sbagliate, dandogli la colpa di quanto successo al figlio.</desc>
   <category lang="it">Intrattenimento</category>
   <image>https://static2.mediasetplay.mediaset.it/Mediaset_Italia_Production_-_Main/F313587401001204/media/23/87/5a16dfce-04a3-4e37-80d3-51b0724c0203/2e8291e4-1364-4f7b-b213-194b724df9a7.jpg</image>
  </programme>
- <programme start="20260812160900 +0000" stop="20260812164000 +0000" channel="canale-5">
+ <programme start="20260812161700 +0000" stop="20260812164700 +0000" channel="canale-5">
   <title lang="it">Tutto per la mia famiglia - PrimaTv</title>
   <sub-title lang="it">Ep. 13 - Tutto per la mia famiglia ii, 76</sub-title>
   <desc lang="it">Kaan entra a far parte della classe e Susen, già innamorata di lui, lo invita alla propria festa di compleanno, ma capisce presto che il ragazzo è più interessato ad Asiye.</desc>
   <category lang="it">Intrattenimento</category>
   <image>https://static2.mediasetplay.mediaset.it/Mediaset_Italia_Production_-_Main/F313587401001304/media/23/87/5a16dfce-04a3-4e37-80d3-51b0724c0203/2e8291e4-1364-4f7b-b213-194b724df9a7.jpg</image>
  </programme>
- <programme start="20260812164000 +0000" stop="20260812175400 +0000" channel="canale-5">
+ <programme start="20260812164700 +0000" stop="20260812175400 +0000" channel="canale-5">
   <title lang="it">The wall</title>
   <sub-title lang="it">Mercoledì 15 luglio</sub-title>
   <desc lang="it">The Wall è il quiz show che unisce conoscenza, strategia e suspense, dove ogni risposta può cambiare il destino del montepremi. Con Max Giusti.</desc>
@@ -6901,23 +6908,23 @@
   <title lang="it">La ruota della fortuna</title>
   <image>https://static2.mediasetplay.mediaset.it/Mediaset_Italia_Production_-_Main/F314328601021801/epg/media/17/81/97910250-721d-4ab7-95a6-44057930c46d/feefe4ff-d22b-45aa-b7b6-07f464ce7cc0.jpg</image>
  </programme>
- <programme start="20260812192000 +0000" stop="20260812212900 +0000" channel="canale-5">
+ <programme start="20260812192000 +0000" stop="20260812212600 +0000" channel="canale-5">
   <title lang="it">Ricchi a tutti i costi - PrimaTv</title>
   <sub-title lang="it">Ricchi a tutti i costi</sub-title>
   <desc lang="it">Minorca. Un matrimonio-lampo, uno sposo di cui diffidare, un piano fuori controllo: i Delle Fave all'attacco per salvare la nonna... e la famiglia. Con C. De Sica.</desc>
   <category lang="it">Film</category>
   <image>https://static2.mediasetplay.mediaset.it/Mediaset_Italia_Production_-_Main/F313246901000101/media/23/87/7e37ef66-6c54-4cd7-ba76-c666e619d860/ff183886-5e60-4c35-9b39-442b7284c94d.jpg</image>
  </programme>
- <programme start="20260812212900 +0000" stop="20260812221200 +0000" channel="canale-5">
+ <programme start="20260812212600 +0000" stop="20260812220900 +0000" channel="canale-5">
   <title lang="it">Tg5</title>
  </programme>
- <programme start="20260812221200 +0000" stop="20260812235800 +0000" channel="canale-5">
+ <programme start="20260812220900 +0000" stop="20260812235500 +0000" channel="canale-5">
   <title lang="it">Croce e delizia</title>
   <desc lang="it">Fabrizio Bentivoglio e Alessandro Gassman ritraggono, con tatto e ironia, l'amore di una coppia gay che scardinera' gli equilibri delle rispettive famiglie.</desc>
   <category lang="it">Film</category>
   <image>https://static2.mediasetplay.mediaset.it/Mediaset_Italia_Production_-_Main/F309517401000101/media/22/86/d437a64c-2e05-421a-bf75-28dc33aa890c/0fa5e181-f3f5-4ae1-b598-07370f3312f6.jpg</image>
  </programme>
- <programme start="20260812235800 +0000" stop="20260813015400 +0000" channel="canale-5">
+ <programme start="20260812235500 +0000" stop="20260813015000 +0000" channel="canale-5">
   <title lang="it">Come un delfino - la serie</title>
   <episode-num system="xmltv_ns">1.0.0/1</episode-num>
   <episode-num system="onscreen">S02E01</episode-num>
@@ -7630,70 +7637,70 @@
   <category lang="it">Intrattenimento</category>
   <image>https://static2.mediasetplay.mediaset.it/Mediaset_Italia_Production_-_Main/F010939301000501/media/20/84/f7cb4bcd-06b5-4071-bad8-43cb3f9e8197/e18b6cd5-5804-4c9f-b79f-457fa3bec37f.jpg</image>
  </programme>
- <programme start="20260812043100 +0000" stop="20260812052000 +0000" channel="iris">
+ <programme start="20260812044300 +0000" stop="20260812053100 +0000" channel="iris">
   <title lang="it">Kojak</title>
   <episode-num system="xmltv_ns">2.15.0/1</episode-num>
   <episode-num system="onscreen">S03E16</episode-num>
   <image>https://static2.mediasetplay.mediaset.it/Mediaset_Italia_Production_-_Main/F311777201001602/epg/media/4/4/c30f63db-5542-448e-a7d5-a26f6381d830/3bc027ad-4dbc-4ba4-a119-83cadd7e2286.jpg</image>
  </programme>
- <programme start="20260812052000 +0000" stop="20260812060400 +0000" channel="iris">
+ <programme start="20260812053100 +0000" stop="20260812062400 +0000" channel="iris">
   <title lang="it">Walker Texas Ranger</title>
   <episode-num system="xmltv_ns">2.3.0/1</episode-num>
   <episode-num system="onscreen">S03E04</episode-num>
   <image>https://static2.mediasetplay.mediaset.it/Mediaset_Italia_Production_-_Main/F007671601000803/epg/media/7/7/a063748a-d810-4d9e-a947-283ae32a8311/c04af262-44a1-4469-800d-7c16ae9fbb74.jpg</image>
  </programme>
- <programme start="20260812060400 +0000" stop="20260812080400 +0000" channel="iris">
+ <programme start="20260812062400 +0000" stop="20260812083600 +0000" channel="iris">
   <title lang="it">Basta che non si sappia in giro!..</title>
   <image>https://static2.mediasetplay.mediaset.it/Mediaset_Italia_Production_-_Main/F000915901000101/epg/media/11/11/549ed9c3-9c98-4d78-9562-d53a564c0d70/cee5b295-d8c4-402f-becf-8a82fc7a4499.jpg</image>
  </programme>
- <programme start="20260812080400 +0000" stop="20260812095700 +0000" channel="iris">
+ <programme start="20260812083600 +0000" stop="20260812101900 +0000" channel="iris">
   <title lang="it">Lo sperone insanguinato</title>
   <sub-title lang="it">LO SPERONE INSANGUINATO</sub-title>
   <image>https://static2.mediasetplay.mediaset.it/Mediaset_Italia_Production_-_Main/F000827501000104/epg/media/12/12/1c43d688-e469-4113-9c6a-43dbb571e141/d48d5cd8-81e2-4110-8dff-1bde8e8a83c1.jpg</image>
  </programme>
- <programme start="20260812095700 +0000" stop="20260812121900 +0000" channel="iris">
+ <programme start="20260812101900 +0000" stop="20260812123800 +0000" channel="iris">
   <title lang="it">Arriva la bufera</title>
   <desc lang="it">In Sicilia, un giudice del Nord cerca di contrastare i loschi traffici di tre sorelle, prima di innamorarsi di una di loro. Con Diego Abatantuono, Margherita Buy</desc>
   <category lang="it">Film</category>
   <image>https://static2.mediasetplay.mediaset.it/Mediaset_Italia_Production_-_Main/F005789201000101/media/6/6/c30595b4-157b-4065-a7f7-024ece39fdda/8f105d22-0086-4507-9385-16456dd18d40.jpg</image>
  </programme>
- <programme start="20260812121900 +0000" stop="20260812143700 +0000" channel="iris">
+ <programme start="20260812123800 +0000" stop="20260812144700 +0000" channel="iris">
   <title lang="it">Napa Valley - La Grande Annata</title>
   <sub-title lang="it">Napa Valley - La grande annata</sub-title>
   <desc lang="it">La vera storia della Montelena Winery, azienda vinicola di Napa Valley che vinse un concorso nel 1976 dando prestigio alla produzione vinicola della California.</desc>
   <category lang="it">Film</category>
   <image>https://static2.mediasetplay.mediaset.it/Mediaset_Italia_Production_-_Main/F302076301000102/media/1/1/d10fbcd1-7522-4d6c-92b6-3c1264c3fddb/52e6cdbe-7e9d-4088-ba24-c63daf316c9c.jpg</image>
  </programme>
- <programme start="20260812143700 +0000" stop="20260812171200 +0000" channel="iris">
+ <programme start="20260812144700 +0000" stop="20260812171600 +0000" channel="iris">
   <title lang="it">Madres Paralelas</title>
   <image>https://static2.mediasetplay.mediaset.it/Mediaset_Italia_Production_-_Main/F311345701000102/epg/media/0/0/8ef2cd6a-cf25-4a15-a13b-b0c166e03645/5e3a7ead-e052-42cb-b84d-c9dc8c7a931c.jpg</image>
  </programme>
- <programme start="20260812171200 +0000" stop="20260812181200 +0000" channel="iris">
+ <programme start="20260812171600 +0000" stop="20260812181200 +0000" channel="iris">
   <title lang="it">Kojak</title>
   <episode-num system="xmltv_ns">2.15.0/1</episode-num>
   <episode-num system="onscreen">S03E16</episode-num>
   <image>https://static2.mediasetplay.mediaset.it/Mediaset_Italia_Production_-_Main/F311777201001602/epg/media/4/4/c30f63db-5542-448e-a7d5-a26f6381d830/3bc027ad-4dbc-4ba4-a119-83cadd7e2286.jpg</image>
  </programme>
- <programme start="20260812181200 +0000" stop="20260812191500 +0000" channel="iris">
+ <programme start="20260812181200 +0000" stop="20260812191400 +0000" channel="iris">
   <title lang="it">Walker Texas Ranger</title>
   <episode-num system="xmltv_ns">2.3.0/1</episode-num>
   <episode-num system="onscreen">S03E04</episode-num>
   <image>https://static2.mediasetplay.mediaset.it/Mediaset_Italia_Production_-_Main/F007671601000803/epg/media/7/7/a063748a-d810-4d9e-a947-283ae32a8311/c04af262-44a1-4469-800d-7c16ae9fbb74.jpg</image>
  </programme>
- <programme start="20260812191500 +0000" stop="20260812213900 +0000" channel="iris">
+ <programme start="20260812191400 +0000" stop="20260812214300 +0000" channel="iris">
   <title lang="it">The Forgiven</title>
   <sub-title lang="it">The forgiven</sub-title>
   <desc lang="it">I ricchi coniugi Henninger, invitati ad una festa nel deserto del Marocco, si smarriscono e finiscono per investire ed uccidere un giovane del posto.</desc>
   <category lang="it">Film</category>
   <image>https://static2.mediasetplay.mediaset.it/Mediaset_Italia_Production_-_Main/F311802701000102/epg/media/5/5/17dae0dc-88e4-4ba4-a724-ec9ad90d1266/d3937ad4-902b-4a27-969b-3e96da63205a.jpg</image>
  </programme>
- <programme start="20260812213900 +0000" stop="20260813003100 +0000" channel="iris">
+ <programme start="20260812214300 +0000" stop="20260813001400 +0000" channel="iris">
   <title lang="it">Profumo - Storia di un assassino</title>
   <desc lang="it">Dal romanzo "Il Profumo" di Peter Suskind. Un efferato assassino è alla ricerca del profumo perfetto, estratto dal corpo di ragazze giovani e belle. Con Ben Whishaw. PUÒ NUOCERE AI MINORI.</desc>
   <category lang="it">Film</category>
   <image>https://static2.mediasetplay.mediaset.it/Mediaset_Italia_Production_-_Main/F012167001000102/media/5/5/d95e7660-683e-4c4e-979e-78dfc8e619d4/a58a4173-658a-466f-acf7-6db80efffbb6.jpg</image>
  </programme>
- <programme start="20260813003100 +0000" stop="20260813022300 +0000" channel="iris">
+ <programme start="20260813001400 +0000" stop="20260813015900 +0000" channel="iris">
   <title lang="it">Napa Valley - La Grande Annata</title>
   <sub-title lang="it">Napa Valley - La grande annata</sub-title>
   <desc lang="it">La vera storia della Montelena Winery, azienda vinicola di Napa Valley che vinse un concorso nel 1976 dando prestigio alla produzione vinicola della California.</desc>
@@ -11159,7 +11166,10 @@
  </programme>
  <programme start="20260811133700 +0000" stop="20260811145700 +0000" channel="rete-4">
   <title lang="it">Diario del giorno</title>
-  <image>https://static2.mediasetplay.mediaset.it/Mediaset_Italia_Production_-_Main/F314228801015901/epg/media/1/1/3e3f1c7f-7126-43dd-a5c2-3f8c13426c15/109c0d05-fc1f-4fb3-9949-557b5733f4eb.jpg</image>
+  <sub-title lang="it">Martedì 11 agosto</sub-title>
+  <desc lang="it">Approfondimento a cura del Tg4 sui principali fatti del giorno.</desc>
+  <category lang="it">Intrattenimento</category>
+  <image>https://static2.mediasetplay.mediaset.it/Mediaset_Italia_Production_-_Main/F314228801015901/media/21/85/1a859ac7-adea-426e-84c3-cf6098e25b9a/8567d7bc-6de5-400f-8b6d-634483df9ddb.jpg</image>
  </programme>
  <programme start="20260811145700 +0000" stop="20260811165800 +0000" channel="rete-4">
   <title lang="it">Inga Lindstrom Collection - Coincidenze del destino</title>
@@ -11457,7 +11467,10 @@
  </programme>
  <programme start="20260811133600 +0000" stop="20260811143000 +0000" channel="tgcom24">
   <title lang="it">Diario del giorno</title>
-  <image>https://static2.mediasetplay.mediaset.it/Mediaset_Italia_Production_-_Main/F314228801015901/epg/media/1/1/3e3f1c7f-7126-43dd-a5c2-3f8c13426c15/109c0d05-fc1f-4fb3-9949-557b5733f4eb.jpg</image>
+  <sub-title lang="it">Martedì 11 agosto</sub-title>
+  <desc lang="it">Approfondimento a cura del Tg4 sui principali fatti del giorno.</desc>
+  <category lang="it">Intrattenimento</category>
+  <image>https://static2.mediasetplay.mediaset.it/Mediaset_Italia_Production_-_Main/F314228801015901/media/21/85/1a859ac7-adea-426e-84c3-cf6098e25b9a/8567d7bc-6de5-400f-8b6d-634483df9ddb.jpg</image>
  </programme>
  <programme start="20260811143000 +0000" stop="20260811151800 +0000" channel="tgcom24">
   <title lang="it">Tgcom24 diretta 2026</title>
@@ -11938,7 +11951,7 @@
   <episode-num system="onscreen">S04E07</episode-num>
   <image>https://static2.mediasetplay.mediaset.it/Mediaset_Italia_Production_-_Main/F012798201000701/media/8/8/852f3c5e-843d-48e2-84cf-f1bd3340373f/e979d592-738d-4680-b78a-99fc5bb4394c.jpg</image>
  </programme>
- <programme start="20260812052500 +0000" stop="20260812060900 +0000" channel="top-crime">
+ <programme start="20260812052500 +0000" stop="20260812060800 +0000" channel="top-crime">
   <title lang="it">Hamburg Distretto 21</title>
   <sub-title lang="it">Ep. 7 - Cittadini del Reich</sub-title>
   <desc lang="it">I genitori di Hermann, nostalgici del nazismo, non mandano il figlio a scuola. I poliziotti del distretto 21 devono intervenire.</desc>
@@ -11947,7 +11960,7 @@
   <episode-num system="onscreen">S14E07</episode-num>
   <image>https://static2.mediasetplay.mediaset.it/Mediaset_Italia_Production_-_Main/F310992401000704/media/5/5/d4545e92-8973-44df-a88d-f61ec470ae65/8301e251-bf37-4bfc-8f6f-372f84252f75.jpg</image>
  </programme>
- <programme start="20260812060900 +0000" stop="20260812070500 +0000" channel="top-crime">
+ <programme start="20260812060800 +0000" stop="20260812070500 +0000" channel="top-crime">
   <title lang="it">Hamburg Distretto 21</title>
   <sub-title lang="it">Ep. 8 - Avidità</sub-title>
   <desc lang="it">All'Associazione Anseatica viene commesso un furto che coincide con l'arrivo di Armin Jentsch armato di un revolver col quale vuole vendicarsi di Konrad Grimm.</desc>
@@ -11997,7 +12010,7 @@
   <episode-num system="onscreen">S01E15</episode-num>
   <image>https://static2.mediasetplay.mediaset.it/Mediaset_Italia_Production_-_Main/F011371201001502/epg/media/9/9/b1cc202d-d473-4902-961f-3c997bdc38b8/d4c7605d-a731-4e23-aeaa-dfca16ad95b4.jpg</image>
  </programme>
- <programme start="20260812111900 +0000" stop="20260812121200 +0000" channel="top-crime">
+ <programme start="20260812111900 +0000" stop="20260812121100 +0000" channel="top-crime">
   <title lang="it">C.S.I. Miami</title>
   <desc lang="it">Un immigrato russo viene ucciso nella cabina di un peepshow. Poco dopo anche la ragazza che si stava intrattenendo con l'uomo muore travolta da un'auto. PUÒ NUOCERE AI MINORI.</desc>
   <category lang="it">Intrattenimento</category>
@@ -12005,19 +12018,19 @@
   <episode-num system="onscreen">S01E16</episode-num>
   <image>https://static2.mediasetplay.mediaset.it/Mediaset_Italia_Production_-_Main/F011371201001602/epg/media/4/4/cbfc9cb2-4235-4fbc-80f9-c83277d0433f/6a4b96a1-34d4-4626-9842-8b26685b3281.jpg</image>
  </programme>
- <programme start="20260812121200 +0000" stop="20260812130200 +0000" channel="top-crime">
+ <programme start="20260812121100 +0000" stop="20260812130100 +0000" channel="top-crime">
   <title lang="it">The Closer</title>
   <episode-num system="xmltv_ns">3.6.0/1</episode-num>
   <episode-num system="onscreen">S04E07</episode-num>
   <image>https://static2.mediasetplay.mediaset.it/Mediaset_Italia_Production_-_Main/F301074001000703/epg/media/17/81/a86689b4-6809-4ce8-ae93-2618c7fd3a90/01be18de-559f-44e3-92e9-8862bbf98708.jpg</image>
  </programme>
- <programme start="20260812130200 +0000" stop="20260812135700 +0000" channel="top-crime">
+ <programme start="20260812130100 +0000" stop="20260812135700 +0000" channel="top-crime">
   <title lang="it">The Closer</title>
   <episode-num system="xmltv_ns">3.7.0/1</episode-num>
   <episode-num system="onscreen">S04E08</episode-num>
   <image>https://static2.mediasetplay.mediaset.it/Mediaset_Italia_Production_-_Main/F301074001000803/epg/media/5/5/e3dce4a0-3a74-4a6b-a8f3-9dfcff43ecda/9c931511-00ba-4a35-9d9b-973a1d5bcd3a.jpg</image>
  </programme>
- <programme start="20260812135700 +0000" stop="20260812145000 +0000" channel="top-crime">
+ <programme start="20260812135700 +0000" stop="20260812144900 +0000" channel="top-crime">
   <title lang="it">Hamburg Distretto 21</title>
   <sub-title lang="it">Ep. 7 - Cittadini del Reich</sub-title>
   <desc lang="it">I genitori di Hermann, nostalgici del nazismo, non mandano il figlio a scuola. I poliziotti del distretto 21 devono intervenire.</desc>
@@ -12026,7 +12039,7 @@
   <episode-num system="onscreen">S14E07</episode-num>
   <image>https://static2.mediasetplay.mediaset.it/Mediaset_Italia_Production_-_Main/F310992401000704/media/5/5/d4545e92-8973-44df-a88d-f61ec470ae65/8301e251-bf37-4bfc-8f6f-372f84252f75.jpg</image>
  </programme>
- <programme start="20260812145000 +0000" stop="20260812154500 +0000" channel="top-crime">
+ <programme start="20260812144900 +0000" stop="20260812154500 +0000" channel="top-crime">
   <title lang="it">Hamburg Distretto 21</title>
   <sub-title lang="it">Ep. 8 - Avidità</sub-title>
   <desc lang="it">All'Associazione Anseatica viene commesso un furto che coincide con l'arrivo di Armin Jentsch armato di un revolver col quale vuole vendicarsi di Konrad Grimm.</desc>
@@ -12103,7 +12116,7 @@
   <episode-num system="onscreen">S02E10</episode-num>
   <image>https://static2.mediasetplay.mediaset.it/Mediaset_Italia_Production_-_Main/F313572801001001/epg/media/20/84/33cbf441-ab10-4623-b36e-abf4df92f503/9cb4d28e-ba8e-4339-a773-fc58f5367016.jpg</image>
  </programme>
- <programme start="20260813001400 +0000" stop="20260813014000 +0000" channel="top-crime">
+ <programme start="20260813001400 +0000" stop="20260813013800 +0000" channel="top-crime">
   <title lang="it">Scambio fatale</title>
   <desc lang="it">Un'aspirante attrice piena di debiti, accetta di fingersi la moglie di un riccone in una cerimonia. Sembra che tutto vada bene ma qualcuno tenta di ucciderla.</desc>
   <category lang="it">Film</category>
@@ -12115,7 +12128,7 @@
  <channel id="livenowfromfox">
   <display-name>LiveNOW from FOX</display-name>
  </channel>
- <programme start="20260811000000 +0000" stop="20260811120000 +0000" channel="abc-news-live">
+ <programme start="20260811000000 +0000" stop="20260811133000 +0000" channel="abc-news-live">
   <title lang="en">ABC News Live</title>
   <sub-title lang="en">ABC News Live</sub-title>
   <desc lang="en">no info available</desc>
@@ -12125,19 +12138,6 @@
   <icon src="https://images.pluto.tv/channels/6508be683a0d700008c534e4/featuredImage.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=900&amp;q=75&amp;w=1600" />
   <rating>
    <value>no rating</value>
-  </rating>
- </programme>
- <programme start="20260811120000 +0000" stop="20260811133000 +0000" channel="abc-news-live">
-  <title lang="en">ABC News Live First</title>
-  <sub-title lang="en">ABC News Live First</sub-title>
-  <desc lang="en">The latest headlines, compelling stories, interviews and roundtable discussions.</desc>
-  <category lang="en">News &amp; Information</category>
-  <category lang="en">News &amp; Information</category>
-  <icon src="https://images.pluto.tv/series/65243fb43e6938001a9d9108/tile_1776279942593.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=660&amp;q=75&amp;w=660" />
-  <episode-num system="xmltv_ns">0.496.0/1</episode-num>
-  <episode-num system="onscreen">S01E497</episode-num>
-  <rating>
-   <value>Not Rated</value>
   </rating>
  </programme>
  <programme start="20260811133000 +0000" stop="20260811140000 +0000" channel="abc-news-live">
@@ -12656,7 +12656,33 @@
    <value>Not Rated</value>
   </rating>
  </programme>
- <programme start="20260812143000 +0000" stop="20260814233000 +0000" channel="abc-news-live">
+ <programme start="20260812143000 +0000" stop="20260812150000 +0000" channel="abc-news-live">
+  <title lang="en">ABC News Live First</title>
+  <sub-title lang="en">ABC News Live First</sub-title>
+  <desc lang="en">The latest headlines, compelling stories, interviews and roundtable discussions.</desc>
+  <category lang="en">News &amp; Information</category>
+  <category lang="en">News &amp; Information</category>
+  <icon src="https://images.pluto.tv/series/65243fb43e6938001a9d9108/tile_1776279942593.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=660&amp;q=75&amp;w=660" />
+  <episode-num system="xmltv_ns">0.497.0/1</episode-num>
+  <episode-num system="onscreen">S01E498</episode-num>
+  <rating>
+   <value>Not Rated</value>
+  </rating>
+ </programme>
+ <programme start="20260812150000 +0000" stop="20260812153000 +0000" channel="abc-news-live">
+  <title lang="en">ABC News Live First</title>
+  <sub-title lang="en">ABC News Live First</sub-title>
+  <desc lang="en">The latest headlines, compelling stories, interviews and roundtable discussions.</desc>
+  <category lang="en">News &amp; Information</category>
+  <category lang="en">News &amp; Information</category>
+  <icon src="https://images.pluto.tv/series/65243fb43e6938001a9d9108/tile_1776279942593.jpg?fill=blur&amp;fit=fill&amp;fm=jpg&amp;h=660&amp;q=75&amp;w=660" />
+  <episode-num system="xmltv_ns">0.498.0/1</episode-num>
+  <episode-num system="onscreen">S01E499</episode-num>
+  <rating>
+   <value>Not Rated</value>
+  </rating>
+ </programme>
+ <programme start="20260812153000 +0000" stop="20260813233000 +0000" channel="abc-news-live">
   <title lang="en">ABC News Live</title>
   <sub-title lang="en">ABC News Live</sub-title>
   <desc lang="en">no info available</desc>
@@ -12768,7 +12794,7 @@
    <value>Not Rated</value>
   </rating>
  </programme>
- <programme start="20260812180000 +0000" stop="20260814233000 +0000" channel="livenowfromfox">
+ <programme start="20260812180000 +0000" stop="20260813233000 +0000" channel="livenowfromfox">
   <title lang="en">LiveNOW from FOX</title>
   <sub-title lang="en">LiveNOW from FOX</sub-title>
   <desc lang="en">no info available</desc>
@@ -12814,10 +12840,10 @@
   <display-name>Rai Scuola</display-name>
  </channel>
  <channel id="rai-gulp">
-  <display-name>RAI GULP</display-name>
+  <display-name>Rai Gulp</display-name>
  </channel>
  <channel id="rai-yoyo">
-  <display-name>RAI YOYO</display-name>
+  <display-name>Rai Yoyo</display-name>
  </channel>
  <programme start="20260810224000 +0000" stop="20260810232000 +0000" channel="rai-1">
   <title lang="it">Sottovoce Livio Berruti</title>
@@ -13359,10 +13385,11 @@
   <image>https://www.raiplay.it/dl/img/2017/06/22/1498124335977_Senza-titolo-1-ok.jpg</image>
  </programme>
  <programme start="20260811115000 +0000" stop="20260811120000 +0000" channel="rai-2">
-  <title lang="it">TG2 Medicina 33</title>
+  <title lang="it">Tg2 Medicina 33 del 13/04/2026</title>
+  <sub-title lang="it">Tg2 Medicina 33 del 13/04/2026</sub-title>
   <desc lang="it">Direttore Antonio Preziosi A cura di Laura Berti</desc>
-  <url>https://www.raiplay.it/dirette/rai2/TG2-Medicina-33-dbb60be9-9a64-4896-aed4-01e2df584746.html</url>
-  <image>https://www.raiplay.it/dl/img/2025/11/05/1762340114039_Tg2_Medicina_33_2048x1152.jpg</image>
+  <url>https://www.raiplay.it/dirette/rai2/Tg2-Medicina-33-del-13042026-dbb60be9-9a64-4896-aed4-01e2df584746.html</url>
+  <image>https://www.raiplay.it/dl/img/2026/04/14/1776136906110_medicina.jpg</image>
  </programme>
  <programme start="20260811120000 +0000" stop="20260811124800 +0000" channel="rai-2">
   <title lang="it">N.C.I.S. Los Angeles S14E5 - I segni del tempo</title>

@@ -32,15 +32,15 @@
 <channel site="guida.tv"                       lang="it" xmltv_id="real-time"          site_id="82847384/real-time">Real Time</channel>
 <channel site="guida.tv"                       lang="it" xmltv_id="food-network"       site_id="70787384/food-network">Food Network</channel>  
 <channel site="mediasetinfinity.mediaset.it"   lang="it" xmltv_id="cine34"             site_id="B6">Cine34</channel>  
-<channel site="guidatv.sky.it"                 lang="it" xmltv_id="radioitalia-tv"     site_id="DTH#9833">Radio Italia TV </channel>
-<channel site="guidatv.sky.it"                 lang="it" xmltv_id="rtl-102-5-tv"        site_id="DTH#6885">RTL 102.5 HD</channel>
-<channel site="guida.tv"                       lang="it" xmltv_id="discovery"          site_id="68736773/discovery-channel-i">Discovery Channel I</channel>
+<channel site="guidatv.sky.it"                 lang="it" xmltv_id="radioitalia-tv"     site_id="DTH#9833">Radio Italia TV</channel>
+<channel site="guidatv.sky.it"                 lang="it" xmltv_id="rtl-102-5-tv"       site_id="DTH#6885">RTL 102.5</channel>
+<channel site="guida.tv"                       lang="it" xmltv_id="discovery"          site_id="68736773/discovery-channel-i">Discovery</channel>
 <channel site="guida.tv"                       lang="it" xmltv_id="giallo"             site_id="71737979/giallo">Giallo</channel>
 <channel site="mediasetinfinity.mediaset.it"   lang="it" xmltv_id="top-crime"          site_id="LT">Top Crime</channel>
 <channel site="guidatv.sky.it"                 lang="it" xmltv_id="boing"              site_id="DTH#6628">Boing</channel>
-<channel site="guidatv.sky.it"                 lang="it" xmltv_id="cartoonito"         site_id="DTH#8132">CARTOONITO DTT</channel>
-<channel site="raiplay.it"                     lang="it" xmltv_id="rai-gulp"           site_id="rai-gulp">RAI GULP</channel>
-<channel site="raiplay.it"                     lang="it" xmltv_id="rai-yoyo"           site_id="rai-yoyo">RAI YOYO</channel>
+<channel site="guidatv.sky.it"                 lang="it" xmltv_id="cartoonito"         site_id="DTH#8132">Cartoonito</channel>
+<channel site="raiplay.it"                     lang="it" xmltv_id="rai-gulp"           site_id="rai-gulp">Rai Gulp</channel>
+<channel site="raiplay.it"                     lang="it" xmltv_id="rai-yoyo"           site_id="rai-yoyo">Rai Yoyo</channel>
 <channel site="guida.tv"                       lang="it" xmltv_id="frisbee"            site_id="73708273/frisbee">Frisbee</channel>
 <channel site="guida.tv"                       lang="it" xmltv_id="k2"                 site_id="75507384/k2">K2</channel>
 <channel site="guidatv.sky.it"                 lang="it" xmltv_id="super"              site_id="DTH#6460">Super!</channel>

@@ -1,4 +1,4 @@
-name: Data Sync Engine
+name: EPG
 
 on:
   schedule:

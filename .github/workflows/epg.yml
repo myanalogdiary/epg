@@ -25,7 +25,7 @@ jobs:
 
       - name: Fetch Submodule Dependencies
         run: git clone --depth 1 https://github.com/iptv-org/epg.git
-        
+
       - name: Set Runtime Environment
         uses: actions/setup-node@v4
         with:
@@ -179,7 +179,10 @@ jobs:
           GIST_ID: ${{ secrets.GIST_ID }}
         run: |
           set -euo pipefail
-          jq -Rs '. as $content | {files: {"guide.xml": {content: $content}}}' guide.xml > json_payload.json
+          
+          # Generazione robusta del payload JSON iniettando il file xml come stringa pura pulita
+          jq -n --rawfile xml_content guide.xml '{files: {"guide.xml": {content: $xml_content}}}' > json_payload.json
+          
           curl -L \
             -X PATCH \
             -H "Accept: application/vnd.github+json" \
@@ -188,5 +191,6 @@ jobs:
             -H "Content-Type: application/json" \
             https://github.com \
             -d @json_payload.json
+            
           rm -f json_payload.json
           echo "Process sync end."

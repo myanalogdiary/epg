@@ -195,6 +195,7 @@ jobs:
         env:
           GIST_PAT: ${{ secrets.GIST_PAT }}
           GIST_ID: ${{ secrets.GIST_ID }}
+          GITHUB_API_URL: "https://github.com"
         run: |
           set -euo pipefail
           
@@ -214,14 +215,16 @@ jobs:
           jq -n --rawfile xml_content guide.xml '{files: {"guide.xml": {content: $xml_content}}}' > json_payload.json
 
           echo "Inizio sincronizzazione sicura verso l'endpoint API ufficiale dei Gist..."
-          # URL perfettamente pulito e corretto verso l'API REST di GitHub
+          # Costruzione dell'URL unendo le variabili senza slash duplicati o refusi di protocollo
+          TARGET_URL="${GITHUB_API_URL}/gists/${GIST_ID}"
+          
           HTTP_STATUS=$(curl -s -w "%{http_code}" -o response_details.txt -L \
             -X PATCH \
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer ${GIST_PAT}" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
             -H "Content-Type: application/json" \
-            https://github.com{GIST_ID} \
+            "${TARGET_URL}" \
             -d @json_payload.json)
 
           # Rimuove immediatamente il file di payload temporaneo per sicurezza
@@ -249,14 +252,13 @@ jobs:
           jq -n --rawfile xml_content guide.xml '{files: {"guide.xml": {content: $xml_content}}}' > json_payload.json
 
           echo "Inizio sincronizzazione sicura verso l'endpoint API ufficiale dei Gist..."
-          # Esegue la chiamata PATCH all'endpoint corretto (://github.com) salvando l'HTTP status code
           HTTP_STATUS=$(curl -s -w "%{http_code}" -o response_details.txt -L \
             -X PATCH \
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer ${GIST_PAT}" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
             -H "Content-Type: application/json" \
-            https://://github.com/gists/${GIST_ID} \
+            https://github.com/gists/${GIST_ID} \
             -d @json_payload.json)
 
           # Rimuove immediatamente il file di payload temporaneo per sicurezza
